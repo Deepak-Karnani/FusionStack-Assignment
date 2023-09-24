@@ -1,0 +1,28 @@
+{
+  "UserSignupForm": [
+    {
+      "fname": "Deepak",
+      "lname": "Karnani",
+      "phone": 9352535889,
+      "email": "Deepak@gmail.com",
+      "password": "Hello",
+      "id": 1
+    },
+    {
+      "fname": "Deepak",
+      "lname": "Karnani",
+      "phone": 9352535889,
+      "email": "karnani@gmail.com",
+      "password": "Hyyyyy",
+      "id": 2
+    },
+    {
+      "fname": "Deepak",
+      "lname": "Karnani",
+      "phone": 9352535889,
+      "email": "Deepak@gmail.com",
+      "password": "karnani",
+      "id": 3
+    }
+  ]
+}

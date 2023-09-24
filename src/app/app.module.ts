@@ -13,7 +13,13 @@ import { TagsComponent } from './components/tags/tags.component';
 import { TitleComponent } from './components/title/title.component';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ProductComponent } from './components/pages/product/product.component';
+import { LoginComponent } from './components/pages/login/login.component';
+import { SignupComponent } from './components/pages/signup/signup.component';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -30,12 +36,19 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     TagsComponent,
     TitleComponent,
     StarRatingComponent,
+    ProductComponent,
+    LoginComponent,
+    SignupComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    NgbModule, // Import and configure RouterModule here
+    ReactiveFormsModule,
+    NgbModule,
+    HttpClientModule,
+    NzIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

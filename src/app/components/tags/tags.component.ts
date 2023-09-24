@@ -8,9 +8,9 @@ import { Tag } from 'src/app/shared/models/Tag';
   styleUrls: ['./tags.component.css'],
 })
 export class TagsComponent implements OnInit {
-  tags?: Tag[];
-  constructor(mobileService: MobileService) {
-    this.tags = mobileService.getAllTags();
+  tags: Tag[]=[];
+  constructor(private mobileService: MobileService) {
+   this.tags = mobileService.getAllTags();
   }
 
   ngOnInit(): void {}

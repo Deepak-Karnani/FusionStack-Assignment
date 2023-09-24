@@ -10,15 +10,15 @@ import { Mobile } from 'src/app/shared/models/Mobile';
   styleUrls: ['./mobile-page.component.css'],
 })
 export class MobilePageComponent implements OnInit {
-  mobile!: Mobile;
+  mobile: Mobile= new Mobile();
   constructor(
     activatedRoute: ActivatedRoute,
-    mobileService: MobileService,
+    private mobileService: MobileService,
     private cartService: CartService,
     private router: Router
   ) {
     activatedRoute.params.subscribe((params) => {
-      if (params['id']) this.mobile = mobileService.getFoodById(params['id']);
+      if (params['id']) this.mobile = mobileService.getMobilesById(params['id']);
     });
   }
 

@@ -14,7 +14,7 @@ export class MobileService{
     return sample_mobile;
   }
 
-  getAllFoodsBySearchTerm(searchTerm: string) {
+  getAllMobilesBySearchTerm(searchTerm: string) {
     return this.getAll().filter((mobile) =>
       mobile.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -24,13 +24,13 @@ export class MobileService{
     return sample_tags;
   }
 
-  getAllFoodsByTag(tag: string): Mobile[] {
+  getAllMobilesByTag(tag: string): Mobile[] {
     return tag === 'All'
       ? this.getAll()
-      : this.getAll().filter((food) => food.tags?.includes(tag));
+      : this.getAll().filter((mobile) => mobile.tags?.includes(tag));
   }
 
-  getFoodById(foodId: string): Mobile {
-    return this.getAll().find((food) => food.id == foodId) ?? new Mobile();
+  getMobilesById(mobileId: string): Mobile {
+    return this.getAll().find((mobile) => mobile.id == mobileId) ?? new Mobile();
   }
 }

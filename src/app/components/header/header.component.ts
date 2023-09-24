@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -8,11 +9,16 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class HeaderComponent implements OnInit {
   cartQuantity = 0;
-  constructor(cartService: CartService) {
+  constructor(
+    cartService: CartService,
+    activatedRoute: ActivatedRoute,
+    private router: Router
+  ) {
     cartService.getCartObservable().subscribe((newCart) => {
       this.cartQuantity = newCart.totalCount;
     });
   }
 
   ngOnInit(): void {}
+
 }

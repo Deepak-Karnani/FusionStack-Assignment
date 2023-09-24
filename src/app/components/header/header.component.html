@@ -1,9 +1,14 @@
-
 <header>
   <div class="container">
     <a routerLink="/" class="logo">MobileMart</a>
     <nav>
       <ul>
+        <li>
+          <a routerLink="/home">Home</a>
+        </li>
+        <li>
+          <a routerLink="/product">Product</a>
+        </li>
         <li>
           <a routerLink="/login">Login</a>
         </li>
@@ -17,7 +22,7 @@
         </li>
         <li>
           <a routerLink="/cart-page">
-            Cart <span>{{cartQuantity}}</span>
+            Cart <span>{{ cartQuantity }}</span>
           </a>
         </li>
       </ul>

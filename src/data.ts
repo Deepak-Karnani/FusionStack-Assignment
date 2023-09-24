@@ -103,12 +103,12 @@ export const sample_mobile: Mobile[] = [
 ];
 
 export const sample_tags: Tag[] = [
-  { name: 'All', count: 9 },
-  { name: 'Iphone', count: 3 },
-  { name: 'Samsung', count: 2 },
-  { name: 'OnePlus', count: 2 },
-  { name: 'Realme', count: 1 },
-  { name: 'Vivo', count: 1 },
-  { name: 'Best Selling', count: 6 },
-  { name: 'New Arrival', count: 3 },
+  { name: 'All' },
+  { name: 'Iphone' },
+  { name: 'Samsung' },
+  { name: 'OnePlus' },
+  { name: 'Realme'},
+  { name: 'Vivo' },
+  { name: 'Best Selling'},
+  { name: 'New Arrival'},
 ];

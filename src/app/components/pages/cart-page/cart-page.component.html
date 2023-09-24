@@ -22,16 +22,16 @@
           [value]="cartItem.quantity"
           (change)="changeQuantity(cartItem, quantitySelect.value)"
         >
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+          <!-- Generate options dynamically for any number -->
+          <option
+            *ngFor="let option of generateQuantityOptions()"
+            [value]="option"
+          >
+            {{ option }}
+          </option>
         </select>
       </div>
-      <div>
-        INR ₹  {{cartItem.price}}
-      </div>
+      <div>INR ₹ {{ cartItem.price }}</div>
 
       <div>
         <button class="remove-button" (click)="removeFromCart(cartItem)">
@@ -43,9 +43,22 @@
   <div class="checkout">
     <div>
       <div class="mobiles-count">{{ cart.totalCount }}</div>
-      <div class="total-price">INR ₹ {{ cart.totalPrice}}</div>
+      <div class="total-price">INR ₹ {{ cart.totalPrice }}</div>
     </div>
 
-    <a routerLink="/checkout">Proceed to Checkout</a>
+    <!-- Show the confirmation message when orderConfirmed is true -->
+    <div *ngIf="orderConfirmed" class="confirmation-message">
+      Order Confirmed! Redirecting to Homepage...
+    </div>
+
+    <!-- Disable the button when the cart is empty or order is confirmed -->
+    <button
+      class="proceed-button"
+      [disabled]="cart.items.length === 0 || orderConfirmed"
+      (click)="confirmOrder()"
+    >
+      Proceed to Checkout
+    </button>
   </div>
 </div>
+<app-footer></app-footer>

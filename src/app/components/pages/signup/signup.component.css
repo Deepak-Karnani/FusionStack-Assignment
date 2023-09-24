@@ -1,0 +1,19 @@
+.card{
+    border: none;
+    width: 500px;
+    height: auto;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: whitesmoke;
+    box-shadow: rgb(red, green, blue);
+}
+
+.card h1{
+    text-align: center;
+}
+label{
+    margin-left: 1px;
+}

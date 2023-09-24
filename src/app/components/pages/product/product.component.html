@@ -1,11 +1,9 @@
-
 <app-search></app-search>
 <app-tags></app-tags>
 <app-page-not-found
   [visible]="!mobiles || !mobiles.length"
   resetLinkText="Reset Search"
 ></app-page-not-found>
-
 <ul>
   <li *ngFor="let mobile of mobiles">
     <a routerLink="/mobile/{{ mobile.id }}">
@@ -35,4 +33,3 @@
     </a>
   </li>
 </ul>
-<app-footer></app-footer>
