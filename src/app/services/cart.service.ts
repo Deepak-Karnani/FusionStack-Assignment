@@ -20,13 +20,13 @@ export class CartService {
     this.setCartToLocalStorage();
   }
 
-  removeFromCart(foodId: string): void {
-    this.cart.items = this.cart.items.filter((item) => item.mobile.id != foodId);
+  removeFromCart(mobileId: string): void {
+    this.cart.items = this.cart.items.filter((item) => item.mobile.id != mobileId);
     this.setCartToLocalStorage();
   }
 
-  changeQuantity(foodId: string, quantity: number) {
-    let cartItem = this.cart.items.find((item) => item.mobile.id === foodId);
+  changeQuantity(mobileId: string, quantity: number) {
+    let cartItem = this.cart.items.find((item) => item.mobile.id === mobileId);
     if (!cartItem) return;
 
     cartItem.quantity = quantity;
